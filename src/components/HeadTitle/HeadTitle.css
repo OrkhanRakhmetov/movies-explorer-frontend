@@ -1,0 +1,12 @@
+.head-title {
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  padding: 0 0 23px;
+  border-bottom: 1px rgba(0, 0, 0, 1) solid;
+  width: 100%;
+  margin: 0;
+}

@@ -1,0 +1,20 @@
+.nav__button {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  background: transparent;
+  padding: 8px 20px;
+  border: none;
+  color: #fff;
+  margin: 3px 0 0;
+  cursor: pointer;
+}
+
+.nav__button_type_login {
+  width: 76px;
+  height: 32px;
+  color: #000000;
+  background: #2BE080;
+  border-radius: 3px;
+}
