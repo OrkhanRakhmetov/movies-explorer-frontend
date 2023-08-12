@@ -4,14 +4,27 @@
   font-weight: 500;
   line-height: 16px;
   background: transparent;
-  padding: 8px 20px;
   border: none;
   color: #fff;
   margin: 3px 0 0;
   cursor: pointer;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.nav__button:last-child {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .nav__button {
+    font-size: 10px;
+    margin-right: 14px;
+  }
 }
 
 .nav__button_type_login {
+  padding: 8px 20px;
   width: 76px;
   height: 32px;
   color: #000000;

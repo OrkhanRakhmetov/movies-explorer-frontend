@@ -1,0 +1,14 @@
+.authbutton{
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 3px;
+  color: #FFF;
+  background: #3456F3;
+  margin: 70px 0 16px;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import HeadTitle from "../HeadTitle/HeadTitle"
 import "./Techs.css"
 
