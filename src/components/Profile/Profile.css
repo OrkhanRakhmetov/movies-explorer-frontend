@@ -6,7 +6,7 @@
   max-width: 410px;
   padding: 74px 70px 70px;
   /* max-height: 100vh; */
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 @media screen and (max-width: 900px) {

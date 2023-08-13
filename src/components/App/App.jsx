@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import CurrentUserContext from '../../contexts/CurrentUserContext.js';
 
@@ -19,11 +20,27 @@ import './App.css';
 
 function App() {
 
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+
+  function handleOpenBurgerMenu() {
+    setIsBurgerMenuOpen(true);
+  }
+
+  function handleCloseBurgerMenu() {
+    setIsBurgerMenuOpen(false);
+  }
+
+
   return (
     <>
       <CurrentUserContext.Provider>
         <Routes>
-          <Route path="/" element={<Header />} >
+          <Route path="/" element={
+            <Header
+              isBurgerMenuOpen={isBurgerMenuOpen}
+              handleOpenBurgerMenu={handleOpenBurgerMenu}
+              handleCloseBurgerMenu={handleCloseBurgerMenu}
+            />} >
             <Route index element={
               <>
                 <Main />
@@ -56,7 +73,7 @@ function App() {
             <PageNotFound />
           } />
         </Routes>
-        {/* <BurgerMenu /> */}
+        <BurgerMenu isOpen={isBurgerMenuOpen} onClose={handleCloseBurgerMenu} />
         <Preloader />
       </CurrentUserContext.Provider>
     </>

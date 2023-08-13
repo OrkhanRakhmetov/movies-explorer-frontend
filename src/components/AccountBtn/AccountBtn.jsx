@@ -6,12 +6,12 @@ import './AccountBtn.css';
 function AccountBtn() {
   return (
     <div className="accountbtn">
-    <Link
-      className="accountbtn__button hover-effect"
-      to="/profile"
-    >
-      Аккаунт
-    </Link>
+      <Link
+        className="accountbtn__button hover-effect"
+        to="/profile"
+      >
+        Аккаунт
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .aboutme {
   padding: 110px 70px 125px;
   margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 @media screen and (max-width: 900px) {

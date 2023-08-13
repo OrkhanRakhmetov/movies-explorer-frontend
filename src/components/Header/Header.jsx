@@ -7,7 +7,7 @@ import AccountBtn from '../AccountBtn/AccountBtn';
 
 import './Header.css';
 
-function Header() {
+function Header({ handleOpenBurgerMenu }) {
   return (
     <>
       <header className="header">
@@ -23,7 +23,10 @@ function Header() {
               <Logo />
               <MoviesNav />
               <AccountBtn />
-              <button className="burger" />
+              <button
+                className="burger"
+                type="button"
+                onClick={handleOpenBurgerMenu} />
             </>
           } />
           <Route path="saved-movies" element={
@@ -31,7 +34,11 @@ function Header() {
               <Logo />
               <MoviesNav />
               <AccountBtn />
-              <button className="burger" />
+              <button
+                className="burger"
+                type="button"
+                onClick={handleOpenBurgerMenu}
+              />
             </>
           } />
           <Route path="profile" element={
@@ -39,7 +46,11 @@ function Header() {
               <Logo />
               <MoviesNav />
               <AccountBtn />
-              <button className="burger button-hover" />
+              <button
+                className="burger button-hover"
+                type="button"
+                onClick={handleOpenBurgerMenu}
+              />
             </>
           } />
         </Routes>

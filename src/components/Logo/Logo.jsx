@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import './Logo.css';
 
 
-function Logo() {
+function Logo({ closeBurgerMenu }) {
   return (
     <Link to='/'>
-      <div className="logo hover-effect"/>
+      <div
+        className="logo hover-effect"
+        onClick={closeBurgerMenu} />
     </Link>
   );
 }

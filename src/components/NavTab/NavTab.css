@@ -10,6 +10,7 @@
   cursor: pointer;
   margin-right: 30px;
   text-decoration: none;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .nav__button:last-child {
@@ -30,4 +31,5 @@
   color: #000000;
   background: #2BE080;
   border-radius: 3px;
+  font-family: 'Inter', Arial, sans-serif;
 }

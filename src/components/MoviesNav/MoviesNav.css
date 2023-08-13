@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 100%; */
+  font-family: 'Inter', Arial, sans-serif;
 }
 @media screen and (max-width: 900px) {
   .moviesnav{

@@ -9,6 +9,7 @@
   border-bottom: 1px rgba(0, 0, 0, 1) solid;
   width: 100%;
   margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
 }
 @media screen and (max-width: 480px) {
   .head-title {
