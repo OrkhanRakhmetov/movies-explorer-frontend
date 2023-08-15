@@ -1,6 +1,7 @@
 .about-project {
-  padding: 110px 70px 100px;
+  padding: 112px 70px 104px;
   margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 
@@ -39,7 +40,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin-top: 70px;
+  margin-top: 71px;
 }
 
 @media screen and (max-width: 900px) {
@@ -52,7 +53,7 @@
   .about-project__desc {
     flex-direction: column; 
     margin-top: 60px;
-    row-gap: 56px;
+    row-gap: 48px;
   }
 }
 
@@ -112,16 +113,16 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-top: 100px;
+  margin-top: 110px;
 }
 @media screen and (max-width: 900px) {
   .about-project__stages  {
-    margin-top: 90px;
+    margin-top: 112px;
   }
 }
 @media screen and (max-width: 480px) {
   .about-project__stages  {
-    margin-top: 60px;
+    margin-top: 53px;
   }
 }
 
@@ -178,6 +179,6 @@
 @media screen and (max-width: 480px) {
   .about-project__stage-text {
     font-size: 11px;
-    padding: 11px 10px;
+    padding: 4px 10px;
   }
 }

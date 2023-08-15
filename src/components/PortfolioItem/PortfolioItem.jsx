@@ -11,7 +11,7 @@ function PortfolioItem({ link, text }) {
         target="_blank"
       >
         <p className="portfolio__link-text">{text}</p>
-        <span className="portfolio__link-simbol hover-effect">↗</span>
+        <div className="portfolio__link-simbol hover-effect"></div>
       </Link>
     </li>
   )

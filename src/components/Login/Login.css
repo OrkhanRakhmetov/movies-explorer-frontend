@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   margin: 0 auto;
   max-width: 396px;
   height: 100vh;
@@ -56,7 +55,9 @@
   }
 }
 
-.login__form-input {}
+.login__form-input {
+  margin-bottom: 110px;
+}
 
 .login__form-submit-button {}
 

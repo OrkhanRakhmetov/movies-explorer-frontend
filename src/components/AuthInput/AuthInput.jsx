@@ -1,7 +1,7 @@
 import React from 'react';
 import "./AuthInput.css"
 
-function AuthInput({label,name,id,type,onChange,placeholder,minLength,maxLength,pattern,value,errMessage}) {
+function AuthInput({label,name,id,type,onChange,placeholder,minLength,maxLength,value,errMessage}) {
   return (
     <div className="authinput">
       <label className="authinput__label" htmlFor={id}>

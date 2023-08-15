@@ -5,7 +5,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.88px;
-  padding: 0 0 23px;
+  padding: 0 0 22px;
   border-bottom: 1px rgba(0, 0, 0, 1) solid;
   width: 100%;
   margin: 0;
@@ -15,6 +15,6 @@
   .head-title {
     font-size: 18px;
     letter-spacing: -0.72px;
-    padding: 0 0 28px;
+    padding: 0 0 30px;
   }
 }

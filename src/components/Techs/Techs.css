@@ -2,17 +2,18 @@
   padding: 100px 70px;
   background-color: #F5F5F5;
   margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 @media screen and (max-width: 900px) {
   .techs {
-    padding: 90px 50px 90px;
+    padding: 93px 50px 90px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .techs {
-    padding: 70px 14px 70px;
+    padding: 70px 14px 76px;
   }
 }
 
@@ -29,6 +30,7 @@
 }
 
 .techs__title {
+  
   color: #000;
   text-align: center;
   font-size: 50px;
@@ -48,7 +50,7 @@
 
 @media screen and (max-width: 480px) {
   .techs__title {
-    padding: 60px 0 24px;
+    padding: 50px 0 12px;
     font-size: 30px;
     letter-spacing: -1.2px;
   }
@@ -96,7 +98,12 @@
   list-style-type: none;
   margin: 0;
 }
-
+@media screen and (max-width: 480px) {
+  .techs__cards  {
+  justify-content: start;
+    padding: 0  57px;
+  }
+}
 
 .techs__cards-item {
   font-size: 14px;

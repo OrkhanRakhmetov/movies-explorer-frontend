@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import "./Profile.css"
 
 function Profile({ handleSubmit }) {
@@ -54,11 +56,12 @@ function Profile({ handleSubmit }) {
         >
           Редактировать
         </button>
-        <button
+
+        <Link
           className="profile__logout hover-effect"
-        >
-          Выйти из аккаунта
-        </button>
+          to="/">Выйти из аккаунта
+        </Link>
+        
       </div>
     </section>
   )

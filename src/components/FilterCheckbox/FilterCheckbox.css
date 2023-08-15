@@ -1,14 +1,13 @@
 .filter-checkbox {
-  font-family: Inter;
   display: flex;
-  margin: 33px 0 0;
+  align-items: center;
   padding: 0;
   font-family: 'Inter', Arial, sans-serif;
 }
 
 @media screen and (max-width: 900px) {
   .filter-checkbox {
-    margin: 30px 0 0;
+    margin: 28px 0 0;
     flex-direction: row-reverse;
   }
 
@@ -34,7 +33,6 @@
   background-color: transparent;
   background-image: url('../../images/smalltumboff.svg');
   background-size: cover;
-  margin-right: 14px;
   cursor: pointer;
   transition: background-image .3s ease-in;
 }
@@ -50,15 +48,21 @@
   /* 138.462% */
   margin: 0;
   padding: 0;
+  margin-left: 16px;
 }
 
 
 @media screen and (max-width: 900px) {
   .filter-checkbox__text {
-    margin-right: 15px;
+    margin-right: 26px;
   }
 }
-
+@media screen and (max-width: 480px) {
+  .filter-checkbox__text {
+    margin-left: 0px;
+    margin-right: 6px;
+  }
+}
 @media screen and (max-width: 480px) {
   .filter-checkbox__invisible-checkbox+.filter-checkbox__visible-checkbox {
     margin-right: 13px;
