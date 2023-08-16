@@ -63,7 +63,7 @@
 .promo__title {
   max-width: 640px;
   color: #FFF;
-  font-size: 53px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 400;
   line-height: 58px;
@@ -95,7 +95,7 @@
 
 .promo__subtitle {
   color: #FFF;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -116,6 +116,8 @@
 @media screen and (max-width: 480px) {
   .promo__subtitle {
     margin-bottom: 78px;
+    margin-top: 23px;
+    max-width: 260px;
   }
 }
 
@@ -145,8 +147,7 @@
   font-weight: 500;
   line-height: 16px;
   border-radius: 3px;
-  border: 1px solid #FFF;
-  /* opacity: 0.6; */
+  border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 10px 0px;
   margin: 0;
   cursor: pointer;

@@ -1,4 +1,4 @@
-.authbutton{
+.authbutton {
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -7,9 +7,21 @@
   border-radius: 3px;
   color: #FFF;
   background: #3456F3;
-  margin: 67px 0 18px;
+  margin: 70px 0 16px;
   width: 100%;
-  padding: 15px 0;
+  padding: 13px 0 13px;
   border: none;
   font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .authbutton {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }

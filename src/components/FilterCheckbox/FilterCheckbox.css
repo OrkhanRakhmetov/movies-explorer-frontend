@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 480px) {
   .filter-checkbox {
-    margin: 40px 0 0;
+    margin: 42px 0 0;
     justify-content: center;
   }
 }
@@ -54,13 +54,16 @@
 
 @media screen and (max-width: 900px) {
   .filter-checkbox__text {
-    margin-right: 26px;
+    margin-right: 16px;
   }
 }
 @media screen and (max-width: 480px) {
   .filter-checkbox__text {
     margin-left: 0px;
-    margin-right: 6px;
+font-size: 11px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 163.636% */
   }
 }
 @media screen and (max-width: 480px) {

@@ -24,12 +24,12 @@
 
 .login__container {
   width: 100%;
-  
+
 }
 
 @media screen and (max-width: 480px) {
   .login__container {
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +47,14 @@
   margin: 40px 0;
 }
 
+@media screen and (max-width: 480px) {
+  .login__title {
+    margin: 50px 0 81px;
+  }
+}
+
+
+
 .login__form {}
 
 @media screen and (max-width: 480px) {
@@ -56,7 +64,15 @@
 }
 
 .login__form-input {
-  margin-bottom: 110px;
+  margin-bottom: 107px;
+}
+
+@media screen and (max-width: 480px) {
+
+  .login__form-input {
+    margin-bottom: 195px;
+
+  }
 }
 
 .login__form-submit-button {}
@@ -77,6 +93,18 @@
   margin-right: 6px;
 }
 
+@media screen and (max-width: 480px) {
+
+  .login__bottom-text-question {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+
+
 .login__bottom-text-link {
   color: #3456F3;
   text-align: center;
@@ -85,4 +113,14 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  .login__bottom-text-link {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }

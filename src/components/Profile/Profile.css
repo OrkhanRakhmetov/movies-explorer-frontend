@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 480px) {
   .profile {
-    padding: 70px 30px 40px;
+    padding: 74px 30px 40px;
   }
 }
 
@@ -37,6 +37,11 @@
   margin: 0;
   margin-bottom: 123px;
 }
+@media screen and (max-width: 900px) {
+  .profile__title {
+    margin-bottom: 96px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .profile__title {
@@ -51,7 +56,13 @@
 
 @media screen and (max-width: 900px) {
   .profile__form {
-    margin-bottom: 210px;
+    margin-bottom: 194px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__form {
+    margin-bottom: 364px;
   }
 }
 

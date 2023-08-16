@@ -47,15 +47,33 @@
   margin: 40px 0;
 }
 
-.register__form {}
-
 @media screen and (max-width: 480px) {
   .register__form {
     width: 100%;
   }
 }
 
+.register__form {}
+
+@media screen and (max-width: 480px) {
+  .register__title {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    margin: 50px 0 80px 0;
+  }
+}
+
 .register__form-input {}
+
+@media screen and (max-width: 480px) {
+  .register__form-input {
+    margin-bottom: 89px;
+  }
+}
 
 .register__input-message {
   display: block;
@@ -68,14 +86,26 @@
   margin-top: -10px;
 }
 
-.register__form-submit-button {}
+.register__form-submit-button {
+  margin-bottom: 3px;
+}
+@media screen and (max-width: 480px) {
+  .register__form-submit-button {
+    margin-bottom: 0px;
+  }
+}
 
 .register__bottom-text-container {
   display: flex;
   justify-content: center;
 
 }
-
+/* @media screen and (max-width: 480px) {
+  .register__bottom-text-container {
+    margin-top: -10px;
+  
+  }
+} */
 .register__bottom-text-question {
   color: #A0A0A0;
   text-align: center;
@@ -86,6 +116,14 @@
   margin-right: 6px;
 }
 
+@media screen and (max-width: 480px) {
+  .register__bottom-text-question {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 .register__bottom-text-link {
   color: #3456F3;
   text-align: center;
@@ -94,4 +132,12 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .register__bottom-text-link {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }

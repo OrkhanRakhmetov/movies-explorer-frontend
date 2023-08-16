@@ -1,3 +1,7 @@
+@import url('./vendor/normalize.css');
+
+@import url('./vendor/fonts.css');
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +12,11 @@ html {
   margin: 0 auto;
 }
 
-.hover-effect  {
+.none-effect {
+  display: none;
+}
+
+.hover-effect {
   transition: opacity .2s ease-in;
 }
 

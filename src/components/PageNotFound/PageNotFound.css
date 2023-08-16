@@ -22,13 +22,12 @@
   font-size: 140px;
   font-weight: 400;
   margin: 0;
-  margin-top: 256px;
+  margin-top: 250px;
+  margin-bottom: 8px;
 }
 @media screen and (max-width: 900px) {
   .notfound__title {
     margin-top: 414px;
-    margin-bottom: 8px;
-
   }
 }
 
@@ -36,6 +35,7 @@
   .notfound__title {
     font-size: 80px;
     font-weight: 400;
+    margin-top: 334px;
     margin-bottom: 10px;
   }
 }
@@ -54,6 +54,7 @@
   .notfound__subtitle {
     font-size: 12px;
     font-weight: 400;
+    margin-bottom: 284px;
   }
 }
 

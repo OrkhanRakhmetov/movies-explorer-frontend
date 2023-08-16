@@ -66,6 +66,12 @@
   top: 21px;
   right: 21px;
 }
+@media screen and (max-width: 480px) {
+  .burger-menu__close-btn {
+    top: 13px;
+    right: 13px;
+  }
+}
 
 .burger-menu__nav {
   width: 100%;
@@ -77,12 +83,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  row-gap: 28px;
+  row-gap: 30px;
 }
 
 @media screen and (max-width: 480px) {
   .burger-menu__nav {
-    row-gap: 24px;
+    row-gap: 26px;
   }
 }
 

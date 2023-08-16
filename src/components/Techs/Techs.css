@@ -13,7 +13,9 @@
 
 @media screen and (max-width: 480px) {
   .techs {
-    padding: 70px 14px 76px;
+    padding: 72px 18px 74px;
+  background-color: #ffffff;
+
   }
 }
 
@@ -101,7 +103,7 @@
 @media screen and (max-width: 480px) {
   .techs__cards  {
   justify-content: start;
-    padding: 0  57px;
+    padding: 0  52px;
   }
 }
 

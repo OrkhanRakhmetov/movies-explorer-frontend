@@ -1,18 +1,18 @@
 .aboutme {
-  padding: 115px 70px 125px;
+  padding: 113px 70px 125px;
   margin: 0 auto;
   font-family: 'Inter', Arial, sans-serif;
 }
 
 @media screen and (max-width: 900px) {
   .aboutme {
-    padding: 94px 50px 97px;
+    padding: 91px 50px 91px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .aboutme {
-    padding: 70px 14px 50px;
+    padding: 64px 14px 46px;
   }
 }
 
@@ -22,26 +22,29 @@
   display: flex;
   justify-content: space-between;
   column-gap: 50px;
-  padding: 66px 0 101px;
+  padding: 63px 0 101px;
 }
 
 @media screen and (max-width: 900px) {
   .aboutme__contatiner {
-    padding-bottom: 90px;
+    padding-bottom: 92px;
     row-gap: 40px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .aboutme__contatiner {
     flex-direction: column-reverse;
     align-items: center;
   }
 }
+
 @media screen and (max-width: 480px) {
   .aboutme__contatiner {
     padding: 60px 0 0px;
   }
 }
+
 .aboutme__text {}
 
 .aboutme__text-title {
@@ -66,8 +69,15 @@
     margin-bottom: 16px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .aboutme__text-title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    margin-bottom: 19px;
   }
 }
 
@@ -80,18 +90,27 @@
   margin: 0;
   margin-bottom: 26px;
 }
+
 @media screen and (max-width: 900px) {
   .aboutme__text-subtitle {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
+    /* 150% */
     margin-bottom: 20px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .aboutme__text-subtitle {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    /* 145.455% */
   }
+
 }
 
 .aboutme__text-description {
@@ -103,20 +122,28 @@
   margin: 0;
   margin-bottom: 99px;
 }
+
 @media screen and (max-width: 900px) {
   .aboutme__text-description {
     font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 150% */
-margin-bottom: 87px;
-max-width: 364px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 150% */
+    margin-bottom: 87px;
+    max-width: 364px;
 
   }
 }
+
 @media screen and (max-width: 480px) {
   .aboutme__text-description {
-    margin-bottom: 26px;
+    margin-bottom: 40px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 145.455% */
   }
 }
 

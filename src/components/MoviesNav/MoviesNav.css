@@ -4,7 +4,7 @@
   justify-content: flex-end;
   width: 100%; */
   font-family: 'Inter', Arial, sans-serif;
-  padding-left: 30px;
+  padding-left: 46px;
 }
 @media screen and (max-width: 900px) {
   .moviesnav{

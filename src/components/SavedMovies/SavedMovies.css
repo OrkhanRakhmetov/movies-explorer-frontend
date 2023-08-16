@@ -4,11 +4,15 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Inter', Arial, sans-serif;
-  margin-bottom: 326px;
+  margin-bottom: 329px;
 }
 
 @media screen and (max-width: 900px) {
   .saved-movies{
     margin-bottom: 248px;
+  }
+}@media screen and (max-width: 480px) {
+  .saved-movies{
+    margin-bottom: 220px;
   }
 }

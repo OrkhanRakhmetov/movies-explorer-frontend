@@ -9,14 +9,14 @@
 
 @media screen and (max-width: 900px) {
   .search-form {
-    margin: 80px 0 90px;
+    margin: 77px 0 90px;
     padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .search-form {
-    margin: 90px 0 80px;
+    margin: 86px 0 80px;
     padding: 0 14px;
   }
 }
@@ -33,13 +33,14 @@
 
 @media screen and (max-width: 900px) {
   .search-form__form {
-    padding-bottom: 9px;
+    padding-bottom: 11px;
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .search-form__form {
-    padding-bottom: 4px;
+    padding-bottom: 6px;
   }
 }
 

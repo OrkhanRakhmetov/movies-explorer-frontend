@@ -8,7 +8,7 @@
   color: #fff;
   margin: 3px 0 0;
   cursor: pointer;
-  margin-right: 34px;
+  margin-right: 30px;
   text-decoration: none;
   font-family: 'Inter', Arial, sans-serif;
 }
@@ -36,6 +36,6 @@
 
 @media screen and (max-width: 480px) {
   .nav__button_type_login {
-    padding: 6px 14px;
+    padding: 8px 12px;
   }
 }
