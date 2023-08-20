@@ -1,0 +1,165 @@
+@import "../../vars.scss";
+
+.register{
+  @include classicDiv(column);
+  align-content: center;
+  gap: 40px;
+  padding: 70px 70px 70px 70px;
+
+  @media screen and (max-width: 800px) {
+    padding: 232px 50px 232px 50px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 56px 30px 30px 30px;
+  }
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.register__top, .register__form{
+  width: 396px;
+
+  @media screen and (max-width: 530px) {
+    width: 260px;
+  }
+}
+
+.register__top{
+  @include classicDiv(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+
+  @media screen and (max-width: 500px) {
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.register__form{
+  @include classicDiv(column);
+  gap: 69px;
+
+  @media screen and (max-width: 500px) {
+    gap: 157px;
+  }
+}
+
+.register__header{
+  @include classicText($fsProfileH, $fwMedium, $lhProfileH, $blackColor, left);
+}
+
+.register__inputs{
+  @include classicDiv(column);
+  gap: 20px;
+  width: 100%;
+
+  .inputElement{
+    @include classicDiv(column);
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+
+    .inputElement__label{
+      @include classicText($fsLoginCaption, $fwRegular, $lhLoginCaption, $grayColor, left);
+      width: 100%;
+    }
+
+    .inputElement__input{
+      @include classicText($fsCaptionFooter, $fwMedium, $lhCaptionFooter, $blackColor, left);
+      box-sizing: border-box;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      height: 46px;
+      background-color: #F9F9F9;
+      padding-left: 15px;
+
+      &:focus {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+        outline: rgba(105, 105, 105, 0.818) 1px auto;
+      }
+
+      &::placeholder{
+        @include classicText($fsLoginCaption, $fwRegular, $lhLoginCaption, $blackColor, left);
+      }
+    }
+
+    .inputElement__inputError{
+      opacity: 0;
+      display: none;
+      @include classicText($fsLoginCaption, $fwRegular, $lhCaptionImages, $redColor, left);
+      height: 28px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .inputElement__inputError_active{
+      opacity: 1;
+      display: flex;
+    }
+  }
+}
+
+.register__buttons{
+  @include classicDiv(column);
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.register__button{
+  all: unset;
+  @include classicDiv(column);
+  @include classicText($fsText, $fwMedium, $lhCaption, $whiteColor, center);
+  background-color: #2BE080;
+  width: 100%;
+  border-radius: 3px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media screen and (max-width: 500px) {
+      @include classicText($fsButton, $fwMedium, $lhButtonEtc, $whiteColor, center);
+    }
+}
+
+.register__buttonEntry{
+  @include classicText($fsText, $fwRegular, $lhCaption, $grayColor, left);
+
+  
+  @media screen and (max-width: 500px) {
+    @include classicText($fsButton, $fwRegular, $lhButtonEtc, $grayColor, left);
+  }
+}
+
+.register__buttonLink{
+  @include classicText($fsText, $fwRegular, $lhCaption, $greenColor, left);
+  cursor: pointer;
+  padding-left: 6px;
+  transition: all 0.3s ease-out;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media screen and (max-width: 500px) {
+      @include classicText($fsButton, $fwMedium, $lhButtonEtc, $greenColor, left);
+      padding-left: 6px;
+    }
+}

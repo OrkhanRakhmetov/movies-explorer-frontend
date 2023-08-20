@@ -1,0 +1,242 @@
+@import "../../vars.scss";
+
+.profile{
+  @include classicDiv(column);
+  padding: 74px 70px 50px 70px;
+  gap: 123px;
+  box-sizing: border-box;
+  position: relative;
+
+  @media screen and (max-width: 800px) {
+    padding: 236px 50px 60px 50px;
+    gap: 96px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 70px 30px 40px 30px;
+    gap: 80px;
+  }
+
+  .profile__header{
+    @include classicText($fsProfileH, $fwMedium, $lhProfileH, $blackColor, center);
+  }
+
+  .profile__info{
+    @include classicDiv(column);
+    gap: 16px;
+    width: 410px;
+    margin-bottom: 97px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 114px;
+    }
+
+    @media screen and (max-width: 550px) {
+      margin-bottom: 279px;
+      width: 260px;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 300px;
+    }
+  }
+
+  .profile__blockinfo{
+    @include classicDiv(row);
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  // .profile__blockinfo_top::after{
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: $lineColor;
+  //   box-sizing: border-box;
+  // }
+
+    .profile__blockinfo_top{
+      padding-bottom: 16px;
+      border-bottom: 1px solid $lineColor;
+  }
+
+  .profile__text{
+    @include classicText($fsProfileT, $fwMedium, $lhCaptionImages, $blackColor, center);
+  }
+
+  .profile__topvalue, .profile__bottomvalue{
+    @include classicText($fsProfileT, $fwRegular, $lhCaptionImages, $blackColor, center);
+  }
+
+  .profile__buttons{
+    @include classicDiv(column);
+    gap: 16px;
+  }
+
+  .profile__button{
+    all: unset;
+    @include classicText($fsCaptionFooter, $fwRegular, $lhCaptionFooter, $blackColor, center);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .profile__buttonExit{
+    @include classicText($fsCaptionFooter, $fwMedium, $lhCaptionFooter, $redColor, center);
+  }
+
+  .popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+
+    .popup__container{
+      @include classicDiv(column);
+      width: 350px;
+      height: 380px;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      border: 1px solid black;
+      border-radius: 4%;
+      justify-content: flex-start;
+
+      @media screen and (max-width: 800px) {
+        width: 320px;
+        height: 365px;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 260px;
+        height: 370px;
+        padding: 10px;
+      }
+
+      .popup__close{
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        @media screen and (max-width: 500px) {
+          right: -9px;
+        }
+      }
+
+      .popup__header{
+        @include classicText($fsH2, $fwMedium, $lhH2, $blackColor, center);
+        padding-top: 30px;
+      }
+      
+      .popup__inputs{
+        @include classicDiv(column);
+        gap: 10px;
+        width: 100%;
+      }
+
+      .popup__inputContainer {
+        @include classicDiv(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+      }
+
+      .popup__label{
+        @include classicText($fsLoginCaption, $fwMedium, $lhLoginCaption, $grayColor, left);
+        width: 100%;
+      }
+
+      .popup__input{
+        height: 35px;
+        outline: none;
+        border: 1px solid rgba(70, 70, 70, 0.688);
+        padding-left: 15px;
+        border-radius: 5px;
+        background-color: #F9F9F9;
+        box-sizing: border-box;
+        width: 100%;
+
+        &:focus {
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+          outline: rgba(105, 105, 105, 0.818) 1px auto;
+        }
+
+        @media screen and (max-width: 800px) {
+          height: 32px;
+          width: 100%;
+        }
+      }
+
+      .popup__inputError{
+        @include classicText($fsLoginCaption, $fwRegular, $lhCaptionImages, $redColor, left);
+        height: 14px;
+        opacity: 0;
+      }
+
+      .popup__inputError_active{
+        opacity: 1;
+      }
+
+      .popup__buttons{
+        @include classicDiv(column);
+        gap: 12px;
+      }
+
+      .popup__button{
+        all: unset;
+        @include classicText($fsCaptionFooter, $fwRegular, $lhCaptionFooter, $blackColor, center);
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      .popup__buttonSave{
+    
+        &:disabled{
+          color: rgba(70, 70, 70, 0.688);
+          cursor: default;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .popup__buttonClose{
+        @include classicText($fsCaptionFooter, $fwMedium, $lhCaptionFooter, $redColor, center);
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  .popup_opened{
+    @include classicDiv(column);
+    background-color: rgba(0, 0, 0, 0.69);
+    max-height: 100vh;
+    min-height: 100%;
+    width: 100%;
+  }
+}

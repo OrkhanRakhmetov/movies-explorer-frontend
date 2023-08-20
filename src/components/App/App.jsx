@@ -1,82 +1,82 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
-import CurrentUserContext from '../../contexts/CurrentUserContext.js';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-import Header from '../Header/Header';
-import Preloader from '../Preloader/Preloader'
-import Main from '../Main/Main.jsx';
-import Footer from '../Footer/Footer.jsx';
-import PageNotFound from '../PageNotFound/PageNotFound.jsx';
-import Register from '../Register/Register.jsx';
-import Login from '../Login/Login.jsx';
-import Profile from '../Profile/Profile.jsx';
-import Movies from '../Movies/Movies.jsx';
-import SavedMovies from '../SavedMovies/SavedMovies.jsx';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import { films } from '../../utils/fakedb';
+import { savedFilms } from '../../utils/fakedb';
 
-import './App.css';
+import Header from '../Header';
+import Footer from '../Footer';
+import Main from '../Main';
+import ErrorToolTip from '../ErrorToolTip';
+import Movies from '../Movies';
+import SavedMovies from '../SavedMovies';
+import Register from '../Register';
+import Login from '../Login';
+import Profile from '../Profile';
+import NotFound from '../NotFound';
+
+import styles from './App.module.scss';
 
 function App() {
+  const { pathname } = useLocation();
+  const [userInfo, setUserInfo] = React.useState({
+    name: 'Булат',
+    email: 'bulat@mail.com',
+    password: '!qwertY1',
+  });
+  const [logedIn, setLogedIn] = React.useState(true);
+  const [isErrorToolTipVisible, setIsErrorToolTipVisible] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState('');
 
-  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
-
-  function handleOpenBurgerMenu() {
-    setIsBurgerMenuOpen(true);
-  }
-
-  function handleCloseBurgerMenu() {
-    setIsBurgerMenuOpen(false);
-  }
-
+  // useEffect(() => {
+  //   setIsErrorToolTipVisible(true);
+  //   setErrorMessage('Ошибка при запросе API');
+  //   setTimeout(() => {
+  //     setIsErrorToolTipVisible(false);
+  //     setErrorMessage('');
+  //   }, 4000);
+  // });
 
   return (
-    <>
-      <CurrentUserContext.Provider>
+    <CurrentUserContext.Provider value={userInfo}>
+      <div className={styles.app}>
+        {(pathname === '/movies' ||
+          pathname === '/saved-movies' ||
+          pathname === '/' ||
+          pathname === '/profile') && <Header pathname={pathname} logedIn={logedIn} />}
+        {isErrorToolTipVisible && (
+          <ErrorToolTip isErrorToolTipVisible={isErrorToolTipVisible} errorMessage={errorMessage} />
+        )}
         <Routes>
-          <Route path="/" element={
-            <Header
-              isBurgerMenuOpen={isBurgerMenuOpen}
-              handleOpenBurgerMenu={handleOpenBurgerMenu}
-              handleCloseBurgerMenu={handleCloseBurgerMenu}
-            />} >
-            <Route index element={
-              <>
-                <Main />
-                <Footer />
-              </>
-            } />
-            <Route path="movies" element={
-              <>
-                <Movies />
-                <Footer />
-              </>
-            } />
-            <Route path="saved-movies" element={
-              <>
-                <SavedMovies />
-                <Footer />
-              </>
-            } />
-            <Route path="profile" element={
-              <Profile />
-            } />
-          </Route>
-          <Route path="/signup" element={
-            <Register />
-          } />
-          <Route path="/signin" element={
-            <Login />
-          } />
-          <Route path="*" element={
-            <PageNotFound />
-          } />
+          <Route path="/" element={<Main />} />
+          <Route path="/movies" element={<Movies movies={films} />} />
+          <Route path="/saved-movies" element={<SavedMovies movies={savedFilms} />} />
+          <Route
+            path="/profile"
+            element={<Profile userInfo={userInfo} setLogedIn={setLogedIn} />}
+          />
+          <Route
+            path="/signin"
+            element={<Login isLogedIn={logedIn} setLogedIn={setLogedIn} userInfo={userInfo} />}
+          />
+          <Route
+            path="/signup"
+            element={
+              <Register
+                setUserInfo={setUserInfo}
+                isLogedIn={logedIn}
+                setLogedIn={setLogedIn}
+                userInfo={userInfo}
+              />
+            }
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <BurgerMenu isOpen={isBurgerMenuOpen} onClose={handleCloseBurgerMenu} />
-        <Preloader />
-      </CurrentUserContext.Provider>
-    </>
+        {(pathname === '/movies' || pathname === '/saved-movies' || pathname === '/') && <Footer />}
+      </div>
+    </CurrentUserContext.Provider>
   );
 }
 

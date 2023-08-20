@@ -1,33 +1,43 @@
-import React from 'react';
-import HeadTitle from "../HeadTitle/HeadTitle"
-import "./Techs.css"
+import styles from './Techs.module.scss';
 
-function Techs() {
+const Techs = () => {
   return (
+    <section id="techs" className={`${styles.landingBlock} ${styles.techs}`}>
+      <div className={styles.slide}>
+        <h2 className={styles.slide__header}>Технологии</h2>
+      </div>
 
-    <section className="techs">
-      <div className="techs__content">
-        <HeadTitle text="Технологии" />
-        <div className="techs__container">
-          <h2 className="techs__title">7 технологий</h2>
-          <p className="techs__subtitle">
-            На курсе веб-разработки мы освоили технологии, которые применили в
-            дипломном проекте.
-          </p>
-          <ul className="techs__cards">
-            <li className='techs__cards-item'>HTML</li>
-            <li className='techs__cards-item'>CSS</li>
-            <li className='techs__cards-item'>JS</li>
-            <li className='techs__cards-item'>React</li>
-            <li className='techs__cards-item'>Git</li>
-            <li className='techs__cards-item'>Express.js</li>
-            <li className='techs__cards-item'>momgoDB</li>
-          </ul>
+      <div className={styles.techs__info}>
+        <h3 className={styles.techs__header}>7 технологий</h3>
+        <p className={styles.techs__text}>
+          На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.
+        </p>
+      </div>
+      <div className={styles.techs__blocks}>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>HTML</p>
         </div>
-      </div >
-    </section >
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>CSS</p>
+        </div>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>JS</p>
+        </div>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>React</p>
+        </div>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>Git</p>
+        </div>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>Express.js</p>
+        </div>
+        <div className={styles.techs__block}>
+          <p className={styles.techs__blockText}>Mongodb</p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-  )
-}
-
-export default Techs
+export default Techs;

@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './NavTab.module.scss';
 
-import '../NavTab/NavTab.css'
-
-function NavTab() {
+const NavTab = () => {
   return (
-    <div className="nav">
-      <Link
-        className="nav__button hover-effect"
-        to="/signup">Регистрация</Link>
-      <Link
-        className="nav__button nav__button_type_login hover-effect"
-        to="/signin">Войти</Link>
-    </div>
+    <nav className={styles.navtab}>
+      <a className={styles.navtab__link} href="#about-project">
+        О проекте
+      </a>
+      <a className={styles.navtab__link} href="#techs">
+        Технологии
+      </a>
+      <a className={styles.navtab__link} href="#about-me">
+        Студент
+      </a>
+    </nav>
   );
-}
+};
 
 export default NavTab;

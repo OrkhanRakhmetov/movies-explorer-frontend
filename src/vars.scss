@@ -1,0 +1,83 @@
+$fsButton: 12px;
+$fsH2: 22px;
+$fsH1: 50px;
+$fsH3: 20px;
+$fsText: 14px;
+$fsText2: 18px;
+$fsBigLinks: 30px;
+$fsCaptionFooter: 13px;
+$fsImages: 15px;
+$fsCaptionImages: 18px;
+$fsProfileH: 24px;
+$fsProfileT: 11px;
+$fsLoginCaption: 10px;
+$fs404: 140px;
+$fs404Caption: 16px;
+
+$fsTabletH1: 40px;
+$fsTabletBigLinks: 28px;
+
+$fsMobileH1: 28px;
+$fsMobileH: 29px;
+$fsMobile404: 80px;
+
+$lhH1: 58px;
+$lhH2: 27px;
+$lhH3: 24px;
+$lhText: 20px;
+$lhText2: 22px;
+$lhCaption: 17px;
+$lhCaptionFooter: 16px;
+$lhBigLinks: 50px;
+$lhPlaceholder: 18px;
+$lhCaptionImages: 13px;
+$lhButtonEtc: 15px;
+$lhProfileH: 29px;
+$lhLoginCaption: 12px;
+$lh404: 169px;
+$lh404Caption: 19px;
+
+$lhTabletH1: 52px;
+$lhTabletH3: 40px;
+
+$lhMobileH1: 37px;
+$lhMobileName: 36px;
+$lhMobileBigLinks: 28px;
+$lhMobile404: 97px;
+
+$blackColor: #000000;
+$grayColor: #A0A0A0;
+$redColor: #EE3465;
+$whiteColor: #FFFFFF;
+$greenColor: #2BE080;
+$fillColor: #F5F5F5;
+$backgroundColor: #FAFAFA;
+$lineColor: #E8E8E8;
+$progressColor: #F2F2F2;
+$iconColor: #F9F9F9;
+
+$fwRegular: 400;
+$fwMedium: 500;
+
+@mixin classicText($fs, $fw, $lh, $c, $ta) {
+  letter-spacing: -4%;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+  text-align: $ta;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin classicDiv($type) {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: $type;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}

@@ -1,0 +1,95 @@
+@import "../../vars.scss";
+
+.portfolio{
+  @include classicDiv(column);
+  max-width: 1280px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 70px 125px 70px;
+  background-color: $whiteColor;
+  width: 100%;
+  gap: 50px;
+  align-items: flex-start;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 50px 90px 50px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 14px 70px 14px;
+    gap: 40px;
+  }
+
+  .portfolio__header{
+    @include classicText($fsText2, $fwRegular, $lhText, $grayColor, left);
+
+    @media screen and (max-width: 500px) {
+      @include classicText($fsText, $fwRegular, $lhText, $grayColor, left);
+    }
+  }
+
+  .portfolio__links {
+    @include classicDiv(column);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+
+    .portfolio__linkBlock{
+      @include classicDiv(row);
+      border-bottom: 1px solid $lineColor;
+      padding-bottom: 22px;
+      box-sizing: border-box;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease-out;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      
+        &:nth-child(3) {
+          border-bottom: 0px solid black;
+        }
+      &:hover {
+        opacity: .7;
+      }
+
+      @media screen and (max-width: 800px) {
+        padding-bottom: 29px;
+      }
+
+      @media screen and (max-width: 500px) {
+        gap: 8px;
+        padding-bottom: 23px;
+      }
+      
+      .portfolio__link{
+        @include classicText($fsBigLinks, $fwRegular, $lhBigLinks, $blackColor, left);
+        letter-spacing: -1px;
+        
+
+        @media screen and (max-width: 800px) {
+          @include classicText($fsTabletBigLinks, $fwRegular, $lhBigLinks, $blackColor, left);
+        }
+
+        @media screen and (max-width: 500px) {
+          @include classicText($fsText2, $fwRegular, $fsMobileH1, $blackColor, left);
+
+        }
+      }
+
+      .portfolio__linkImage{
+        cursor: pointer;
+        padding-right: 6px;
+
+        @media screen and (max-width: 500px) {
+          width: 12px;
+          height: 12px;
+          padding-right: 0;
+          margin-right: -3px;
+        }
+      }
+    }
+  }
+}

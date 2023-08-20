@@ -1,0 +1,79 @@
+@import "../../vars.scss";
+
+.movies{
+  @include classicDiv(column);
+  width: 100%;
+  gap: 30px;
+  padding: 70px 0 0 0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 730px) {
+    padding: 40px 0 0 0;
+    gap: 40px;
+  }
+}
+
+.movies__cardlist{
+  @include classicDiv(row);
+  padding: 0 70px 0 70px;
+  width: 100%;
+  gap: 30px 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1100px) {
+    gap: 22px 22px;
+  }
+
+  @media screen and (max-width: 940px) {
+    gap: 20px 20px;
+    padding: 0 40px 0 40px;
+  }
+
+  @media screen and (max-width: 800px) {
+    gap: 36px 25px;
+    padding: 0 30px 0 30px;
+  }
+
+  @media screen and (max-width: 730px) {
+    gap: 16px;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.movies__etc{
+  @include classicDiv(row);
+  max-height: 166px;
+  min-height: 140px;
+  margin-bottom: 25px;
+
+  .movies__textetc{
+    all: unset;
+    @include classicText($fsButton, $fwMedium, $lhButtonEtc, $blackColor, center);
+    margin: 0 auto;
+    justify-content: center;
+    width: 320px;
+    height: 36px;
+    background-color: #F9F9F9;
+    border-radius: 6px;
+    padding-top: 11px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 240px;
+    }
+  }
+
+  .movies__textetc_active{
+    display: flex;
+  }
+}

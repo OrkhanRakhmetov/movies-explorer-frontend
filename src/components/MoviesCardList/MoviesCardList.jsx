@@ -1,28 +1,28 @@
-import React from 'react'
+import MoviesCard from '../MoviesCard';
 
-import MoviesCard from '../MoviesCard/MoviesCard'
+import styles from './MoviesCardList.module.scss';
 
-import { useLocation } from 'react-router-dom'
-import './MoviesCardList.css'
+const MoviesCardList = ({ etcFilms, countFilms, movies }) => {
+  return (
+    <div className={styles.movies}>
+      <div className={styles.movies__cardlist}>
+        {movies
+          .slice(0, countFilms)
+          .map((movie) => movie && <MoviesCard movieInfo={movie} key={movie._id} />)}
+      </div>
 
-function MoviesCardList({ cards }) {
-  const location = useLocation()
+      <div className={styles.movies__etc}>
+        <button
+          type="button"
+          onClick={etcFilms}
+          className={`${styles.movies__textetc} ${
+            countFilms < movies.length && styles.movies__textetc_active
+          }`}>
+          Ещё
+        </button>
+      </div>
+    </div>
+  );
+};
 
-	return (
-		<section className='movies-cards'>
-			<ul className='movies-cards__items'>
-				{cards.map(card => {
-					return <MoviesCard key={card.id} card={card} />
-				})}
-			</ul>
-			{location.pathname === '/movies' && (
-				<button className='movies-cards__button hover-effect'>Ещё</button>
-			)}
-      	{location.pathname === '/saved-movies' && (
-				<button className='movies-cards__button none-effect'>Ещё</button>
-			)}
-		</section>
-	)
-}
-
-export default MoviesCardList
+export default MoviesCardList;

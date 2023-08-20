@@ -1,37 +1,52 @@
-import React from 'react'
+// import pic from '../../images/avatar.png';
+import flaggray from '../../images/flaggray.svg';
+import flagwhite from '../../images/flagwhite.svg';
+import deleteicon from '../../images/deleteicon.svg';
 
-import { useLocation } from 'react-router-dom'
-import './MoviesCard.css'
+import styles from './MoviesCard.module.scss';
 
-function MoviesCard({ card }) {
-	const location = useLocation()
+const MoviesCard = ({ movieInfo }) => {
+  const {
+    country,
+    director,
+    duration,
+    year,
+    description,
+    image,
+    trailerLink,
+    thumbnail,
+    nameRU,
+    nameEN,
+    _id,
+  } = movieInfo;
 
-	const moviesDuration = min => {
-		const hours = Math.trunc(min / 60)
-		const minutes = min % 60
-		return hours + 'ч ' + minutes + 'м'
-	}
+  const secToTime = (duration) => {
+    const hours = Math.floor(duration / 60);
+    const min = Math.floor(duration % 60);
+    return `${hours}ч ${min}м`;
+  };
 
-	return (
-		<li className='moviescard'>
-			<img className='moviescard__img' src={card.image} alt={card.nameRU} />
-			<div className='moviescard__info'>
-				<a className='moviescard__link hover-effect' href={card.trailerLink}>
-					{card.nameRU}
-				</a>
-				{location.pathname === '/movies' && (
-					<button className='moviescard__like hover-effect' />
-				)}
+  return (
+    <div className={styles.card}>
+      <div className={styles.card__top}>
+        <div className={styles.card__left}>
+          <h2 className={styles.card__name}>{nameRU}</h2>
+          <p className={styles.card__duration}>{secToTime(duration)}</p>
+        </div>
 
-				{location.pathname === '/saved-movies' && (
-					<button className='moviescard__delete hover-effect' />
-				)}
-			</div>
-			<span className='moviescard__duration'>
-				{moviesDuration(card.duration)}
-			</span>
-		</li>
-	)
-}
+        <button className={`${styles.card__right}`} type="button">
+          <img
+            className={`${styles.card__favorite}`}
+            alt="добавить в избранное"
+            src={flaggray}></img>
+        </button>
+      </div>
 
-export default MoviesCard
+      <div className={styles.card__bottom}>
+        <img className={styles.card__image} src={image} alt={description}></img>
+      </div>
+    </div>
+  );
+};
+
+export default MoviesCard;

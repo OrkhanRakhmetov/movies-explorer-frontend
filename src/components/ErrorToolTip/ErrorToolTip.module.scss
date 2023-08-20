@@ -1,0 +1,25 @@
+@import "../../vars.scss";
+
+
+.tooltip{
+  display: none;
+  position: fixed;
+  top: 300px;
+  width: 800px;
+  height: 400px;
+}
+// .landingBlock {
+//   @include classicDiv(column);
+//   max-width: 1280px;
+//   width: 100%;
+//   box-sizing: border-box;
+//   padding: 0 70px;
+
+//   @media screen and (max-width: 800px) {
+//     padding: 0 50px;
+//   }
+
+//   @media screen and (max-width: 500px) {
+//     padding: 0 14px;
+//   }
+// }
