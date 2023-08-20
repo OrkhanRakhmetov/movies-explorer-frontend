@@ -1,29 +1,58 @@
-import React from 'react';
+import searchFormButton from '../../images/searchicon.svg';
 
-import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
+import styles from './SearchForm.module.scss';
 
-import './SearchForm.css';
-
-function SearchForm() {
+const SearchForm = ({
+  isShortVideos,
+  onClickButtonSearch,
+  onChangeSearch,
+  onChangeToggle,
+  searchTextInputValue,
+  pathname,
+}) => {
   return (
-    <section className='search-form'>
-      <form
-        className="search-form__form"
-      >
-        <input
-          className="search-form__input"
-          placeholder="Фильм"
-          required
-        />
-        <input
-          className="search-form__submit"
-          type="submit"
-          value=" "
-        />
+    <div className={styles.searchform}>
+      <form className={styles.searchform__searching}>
+        <div className={styles.searchform__form}>
+          <input
+            className={styles.searchform__input}
+            type="text"
+            placeholder="Фильм"
+            onChange={onChangeSearch}
+            value={searchTextInputValue}
+            required
+          />
+          <button
+            className={styles.searchform__button}
+            type="submit"
+            onClick={(event) => {
+              onClickButtonSearch(event);
+            }}>
+            <img
+              className={styles.searchform__buttonimage}
+              src={searchFormButton}
+              alt="поиск фильмов"
+            />
+          </button>
+        </div>
+
+        <div className={styles.searchform__shortsContainer}>
+          <p className={styles.searchform__shortsText}>Короткометражки</p>
+
+          <label className={styles.searchform__shortsButton}>
+            <input
+              value={isShortVideos}
+              checked={isShortVideos}
+              type="checkbox"
+              onChange={onChangeToggle}
+              className={styles.searchform__shortsCheckbox}
+            />
+            <span className={styles.searchform__shortsSlider} />
+          </label>
+        </div>
       </form>
-      <FilterCheckbox />
-    </section>
-  )
-}
+    </div>
+  );
+};
 
 export default SearchForm;

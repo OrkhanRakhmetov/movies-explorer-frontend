@@ -1,0 +1,120 @@
+@import "../../vars.scss";
+
+.tooltip{
+  display: none;
+  position: fixed;
+  top: 40px;
+  height: auto;
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 55;
+  padding: 35px;
+  max-width: 1040px;
+}
+
+.tooltip_visible{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tooltip__container{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+.tooltip__image{
+  width: 100px;
+  height: 170px;
+
+  @media screen and (max-width: 800px) {
+    width: 80px;
+    height: 140px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 60px;
+    height: 110px;
+  }
+}
+
+.tooltip__imageWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip__textWrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 3fr;
+  gap: 9px;
+}
+
+.tooltip__close{
+  position: absolute;
+  top: -30px;
+  right: -5px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.tooltip__header{
+  @include classicText($fsH2, $fwMedium, $lhH2, $blackColor, center);
+  margin-top: 10px;
+
+  @media screen and (max-width: 800px) {
+    @include classicText(20px, $fwMedium, 21px, $blackColor, center);
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+    @include classicText(14px, $fwMedium, 15px, $blackColor, center);
+    margin-top: 8px;
+  }
+}
+
+.tooltip__text{
+  @include classicText(13px, $fwRegular, $lhH3, $redColor, center);
+
+  @media screen and (max-width: 800px) {
+    @include classicText(13px, $fwRegular, 15px, $redColor, center);
+  }
+  @media screen and (max-width: 500px) {
+    @include classicText(11px, $fwRegular, 14px, $redColor, center);
+  }
+}
+
+.tooltip__joke{
+  @include classicText($fsText, $fwRegular, $lhCaption, $blackColor, center);
+
+  @media screen and (max-width: 800px) {
+    @include classicText(12px, $fwRegular, 14px, $blackColor, center);
+  }
+  @media screen and (max-width: 500px) {
+    @include classicText(11px, $fwRegular, 12px, $blackColor, center);
+  }
+}
+
+.tooltip__imageWrapper{
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}

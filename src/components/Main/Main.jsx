@@ -1,25 +1,21 @@
-import React from 'react';
-import Promo from '../Promo/Promo';
-import AboutProject from '../AboutProject/AboutProject';
-import Techs from '../Techs/Techs';
-import AboutMe from '../AboutMe/AboutMe';
+import Promo from '../Promo';
+import AboutProject from '../AboutProject';
+import Techs from '../Techs';
+import AboutMe from '../AboutMe';
+import Portfolio from '../Portfolio';
 
-// import Movies from '../Movies/Movies.jsx';
+import styles from './Main.module.scss';
 
-
-import './Main.css';
-
-function Main() {
+const Main = () => {
   return (
-    <>
-      <main className="main">
-        <Promo />
-        <AboutProject />
-        <Techs />
-        <AboutMe />
-      </main></>
-
+    <main className={styles.main}>
+      <Promo />
+      <AboutProject />
+      <Techs />
+      <AboutMe />
+      <Portfolio />
+    </main>
   );
-}
+};
 
 export default Main;

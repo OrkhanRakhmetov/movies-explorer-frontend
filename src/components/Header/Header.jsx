@@ -1,63 +1,20 @@
-import React from 'react';
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
-import NavTab from '../NavTab/NavTab';
-import Logo from '../Logo/Logo';
-import MoviesNav from '../MoviesNav/MoviesNav';
-import AccountBtn from '../AccountBtn/AccountBtn';
+import { Link } from 'react-router-dom';
 
-import './Header.css';
+import logo from '../../images/logomain.svg';
 
-function Header({ handleOpenBurgerMenu }) {
+import Navigation from '../Navigation';
+
+import styles from './Header.module.scss';
+
+const Header = ({ pathname, logedIn }) => {
   return (
-    <>
-      <header className="header">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Logo />
-              <NavTab />
-            </>
-          } />
-          <Route path="movies" element={
-            <>
-              <Logo />
-              <MoviesNav />
-              <AccountBtn />
-              <button
-                className="burger"
-                type="button"
-                onClick={handleOpenBurgerMenu} />
-            </>
-          } />
-          <Route path="saved-movies" element={
-            <>
-              <Logo />
-              <MoviesNav />
-              <AccountBtn />
-              <button
-                className="burger"
-                type="button"
-                onClick={handleOpenBurgerMenu}
-              />
-            </>
-          } />
-          <Route path="profile" element={
-            <>
-              <Logo />
-              <MoviesNav />
-              <AccountBtn />
-              <button
-                className="burger button-hover"
-                type="button"
-                onClick={handleOpenBurgerMenu}
-              />
-            </>
-          } />
-        </Routes>
-      </header>
-      <Outlet />
-    </>
-  )
-}
+    <header className={styles.header}>
+      <Link to="/">
+        <img src={logo} alt="Логотип сайта" className={styles.logo} />
+      </Link>
+      <Navigation pathname={pathname} logedIn={logedIn} />
+    </header>
+  );
+};
 
 export default Header;

@@ -1,37 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './Footer.module.scss';
 
-import '../Footer/Footer.css';
-
-function Footer() {
+const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='footer__content'>
-        <p className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
-        <div className='footer__container'>
-          <p className='footer__date'>&copy; {(new Date()).getFullYear()}</p>
-          <ul className='footer__list'>
-            <li className='footer__item'>
-              <Link to="https://practicum.yandex.ru/"
-                className="footer__link hover-effect"
-                target="_blank"
-              >
-                Яндекс.Практикум
-              </Link>
-            </li>
-            <li className='footer__item'>
-              <Link to="https://github.com/OrkhanRakhmetov"
-                className="footer__link hover-effect"
-                target="_blank"
-              >
-                Github
-              </Link>
-            </li>
-          </ul>
+    <footer className={styles.footer}>
+      <p className={styles.sources}>Учебный проект Яндекс.Практикум х BeatFilm.</p>
+      {/* <div className={styles.line}></div> */}
+      <div className={styles.footer__bottom}>
+        <div className={styles.copyright}>© {new Date().getFullYear()}</div>
+
+        <div className={styles.footer__links}>
+          <a
+            className={styles.footer__link}
+            target="_blank"
+            rel="noreferrer"
+            href="https://practicum.yandex.ru">
+            Яндекс.Практикум
+          </a>
+          <a
+            className={styles.footer__link}
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com">
+            GitHub
+          </a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
