@@ -1,0 +1,117 @@
+.moviescard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border-radius: 6px;
+  background: #fdfdfd;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+  color: #000;
+}
+
+/* .moviescard:hover {
+	width: 30px;
+	height: 30px;
+	background-image: url(../../images/delete.svg);
+	background-color: #fff;
+	border: none;
+} */
+
+.moviescard__img {
+  width: 100%;
+  aspect-ratio: 1.79;
+  object-fit: cover;
+  object-position: center;
+}
+
+.moviescard__info {
+  max-height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 14px 16px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .moviescard__info {
+    padding: 12px 14px 14px;
+    /* padding: 16px 14px 16px; */
+  }
+}
+@media screen and (max-width: 480px) {
+  .moviescard__info {
+    padding: 13px 12px 11px;
+  }
+}
+
+.moviescard__link {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .moviescard__link {
+    font-size: 12px;
+  }
+}
+
+.moviescard__like {
+  /* width: 30px;
+  height: 30px;
+  background-image: url(../../images/heart.svg);
+  background-color: #fff;
+  border: none; */
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: 0 0;
+  background-image: url(../../images/heart.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+}
+
+.moviescard__like_active {
+  background-image: url(../../images/heart-red.svg);
+}
+
+.moviescard__delete {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/delete.svg);
+  background-color: #fff;
+  border: none;
+  /* display: none; */
+}
+
+.moviescard__delete:hover {
+  display: block;
+}
+
+.moviescard__duration {
+  color: #a0a0a0;
+  font-size: 11px;
+  font-weight: 400;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .moviescard__duration {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,126 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 396px;
+  height: 100vh;
+  padding: 70px 30px 0;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .login {
+    padding: 232px 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    padding: 56px 30px 0px;
+  }
+}
+
+.login__container {
+  width: 100%;
+
+}
+
+@media screen and (max-width: 480px) {
+  .login__container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.login__title {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  margin: 40px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .login__title {
+    margin: 50px 0 81px;
+  }
+}
+
+
+
+.login__form {}
+
+@media screen and (max-width: 480px) {
+  .login__form {
+    width: 100%;
+  }
+}
+
+.login__form-input {
+  margin-bottom: 107px;
+}
+
+@media screen and (max-width: 480px) {
+
+  .login__form-input {
+    margin-bottom: 195px;
+
+  }
+}
+
+.login__form-submit-button {}
+
+.login__bottom-text-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.login__bottom-text-question {
+  color: #A0A0A0;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 6px;
+}
+
+@media screen and (max-width: 480px) {
+
+  .login__bottom-text-question {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+
+
+.login__bottom-text-link {
+  color: #3456F3;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  .login__bottom-text-link {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

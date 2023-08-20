@@ -1,0 +1,140 @@
+.footer {
+  padding: 0 70px 0;
+  margin: 55px auto 20px;
+  max-width: 1280px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 22px 10px 0;
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0 30px 0;  */
+}
+
+.footer__title {
+  color: #A0A0A0;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  line-height: normal;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #E8E8E8;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__title {
+    margin-bottom: 27px;
+    padding: 3px 0 22px;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.footer__date {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__date {
+    color: #A0A0A0;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+}
+
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+}
+
+.footer__link {
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__link {
+    padding-bottom: 12px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.footer__item {
+  margin-right: 20px;
+}
+
+.footer__item:last-child {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__item {
+    margin-right: 0px;
+    margin-top: 9px;
+
+  }
+
+  .footer__item:first-child {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
