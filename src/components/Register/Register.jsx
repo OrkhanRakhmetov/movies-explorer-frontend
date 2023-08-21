@@ -20,9 +20,9 @@ const Register = ({ isLogedIn, handleRegisterUser }) => {
   const [userName, setUserName] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [userEmail, setUserEmail] = useState('');
-  const [isErrorUserPassword, setIsErrorUserPassword] = useState(true);
-  const [isErrorUserName, setIsErrorUserName] = useState(true);
-  const [isErrorUserEmail, setIsErrorUserEmail] = useState(true);
+  const [isErrorUserPassword, setIsErrorUserPassword] = useState(false);
+  const [isErrorUserName, setIsErrorUserName] = useState(false);
+  const [isErrorUserEmail, setIsErrorUserEmail] = useState(false);
   const [errorUserPassword, setErrorUserPassword] = useState('Вы не ввели пароль');
   const [errorUserName, setErrorUserName] = useState('Вы не ввели имя');
   const [errorUserEmail, setErrorUserEmail] = useState('Вы не ввели почту');

@@ -57,7 +57,7 @@ function App() {
   );
 
   const [isShortVideos, setIsShortVideos] = React.useState(
-    JSON.parse(localStorage.getItem('isShortVideos') ?? true),
+    JSON.parse(localStorage.getItem('isShortVideos') ?? false),
   );
 
   const onChangeToggle = () => {
@@ -456,7 +456,7 @@ function App() {
               element={<Register isLogedIn={logedIn} handleRegisterUser={handleRegisterUser} />}
             />
           )}
-          <Route path="*" element={<NotFound navigate={navigate} />} />
+          <Route path="*" element={<NotFound navigate={navigate}/>} />
         </Routes>
         {(pathname === '/movies' || pathname === '/saved-movies' || pathname === '/') && <Footer />}
       </div>

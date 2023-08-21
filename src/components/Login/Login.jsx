@@ -18,8 +18,8 @@ const Login = ({ isLogedIn, handleLoginUser, allMovies, handleGetAllMovies }) =>
 
   const [userPassword, setUserPassword] = useState('');
   const [userEmail, setUserEmail] = useState('');
-  const [isErrorUserPassword, setIsErrorUserPassword] = useState(true);
-  const [isErrorUserEmail, setIsErrorUserEmail] = useState(true);
+  const [isErrorUserPassword, setIsErrorUserPassword] = useState(false);
+  const [isErrorUserEmail, setIsErrorUserEmail] = useState(false);
   const [errorUserPassword, setErrorUserPassword] = useState('Вы не ввели пароль');
   const [errorUserEmail, setErrorUserEmail] = useState('Вы не ввели почту');
 

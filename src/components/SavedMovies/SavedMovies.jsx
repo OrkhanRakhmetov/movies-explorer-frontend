@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from 'react';
 
 import useResize from 'use-resize';
@@ -10,6 +9,16 @@ import Preloader from '../Preloader';
 import { DURATION_SHORT_FILM } from '../../utils/consts';
 
 import { CYRILLIC_REGEX } from '../../utils/regEx';
+
+import {
+  COMP_SCREEN_WIDTH,
+  TABLET_SCREEN_WIDTH,
+  COMP_COUNT_FILMS,
+  TABLET_COUNT_FILMS,
+  MOBILE_COUNT_FILMS,
+  COMP_ETC_COUNT_FILMS,
+  MOBILE_ETC_COUNT_FILMS,
+} from '../../utils/consts';
 
 import styles from './SavedMovies.module.scss';
 
@@ -28,22 +37,22 @@ const SavedMovies = ({ movies, handleDeleteMovie, isPreloaderVisible, pathname, 
   const isMountedIsShortVideos = useRef(false);
 
   useEffect(() => {
-    if (windowWidth >= 1280) {
-      setCountFilms(12);
-    } else if (windowWidth < 1280 && windowWidth >= 768) {
-      setCountFilms(8);
+    if (windowWidth >= COMP_SCREEN_WIDTH) {
+      setCountFilms(COMP_COUNT_FILMS);
+    } else if (windowWidth < COMP_SCREEN_WIDTH && windowWidth >= TABLET_SCREEN_WIDTH) {
+      setCountFilms(TABLET_COUNT_FILMS);
     } else {
-      setCountFilms(5);
+      setCountFilms(MOBILE_COUNT_FILMS);
     }
   }, [windowWidth]);
 
   const etcFilms = () => {
-    if (windowWidth >= 1280) {
-      setCountFilms(countFilms + 3);
-    } else if (windowWidth < 1280 && windowWidth >= 780) {
-      setCountFilms(countFilms + 2);
+    if (windowWidth >= COMP_SCREEN_WIDTH) {
+      setCountFilms(countFilms + COMP_ETC_COUNT_FILMS);
+    } else if (windowWidth < COMP_SCREEN_WIDTH && windowWidth >= TABLET_SCREEN_WIDTH) {
+      setCountFilms(countFilms + MOBILE_ETC_COUNT_FILMS);
     } else {
-      setCountFilms(countFilms + 2);
+      setCountFilms(countFilms + MOBILE_ETC_COUNT_FILMS);
     }
   };
 

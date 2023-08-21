@@ -12,7 +12,7 @@ const Portfolio = () => {
           className={styles.portfolio__linkBlock}
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/">
+          href="https://github.com/Numarta/russian-travel">
           <p className={styles.portfolio__link}>Статичный сайт</p>
           <img
             className={styles.portfolio__linkImage}
@@ -24,7 +24,7 @@ const Portfolio = () => {
           className={styles.portfolio__linkBlock}
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/">
+          href="https://github.com/Numarta/how-to-learn">
           <p className={styles.portfolio__link}>Адаптивный сайт</p>
           <img
             className={styles.portfolio__linkImage}
@@ -36,7 +36,7 @@ const Portfolio = () => {
           className={styles.portfolio__linkBlock}
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/">
+          href="https://github.com/Numarta/react-mesto-api-full-gha">
           <p className={styles.portfolio__link}>Одностраничное приложение</p>
           <img
             className={styles.portfolio__linkImage}
