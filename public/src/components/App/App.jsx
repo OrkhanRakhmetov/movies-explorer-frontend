@@ -71,14 +71,12 @@ function App() {
           return !isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            : movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         } else {
           return !isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            :movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         }
       }),
     );
@@ -118,7 +116,7 @@ function App() {
     if (TOKEN && logedIn) {
       compareToken(TOKEN);
     }
-  });
+  }, []);
 
   useEffect(() => {
     const TOKEN = localStorage.getItem('jwt');
@@ -148,14 +146,12 @@ function App() {
           return isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            :          movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         } else {
           return isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            :             movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         }
       }),
     );

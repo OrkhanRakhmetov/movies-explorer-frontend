@@ -60,7 +60,7 @@ const SavedMovies = ({ movies, handleDeleteMovie, isPreloaderVisible, pathname, 
     if (isMountedSearchFilmsResult.isMounted) {
       setSearchFilmsResult(
         movies.filter((movie) => {
-          return movie.duration > DURATION_SHORT_FILM;
+          return movie.duration > 0;
         }),
       );
     } else {
@@ -78,14 +78,12 @@ const SavedMovies = ({ movies, handleDeleteMovie, isPreloaderVisible, pathname, 
             return isShortVideos
               ? movie.duration <= DURATION_SHORT_FILM &&
                   movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-              : movie.duration > DURATION_SHORT_FILM &&
-                  movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+              : movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
           } else {
             return isShortVideos
               ? movie.duration <= DURATION_SHORT_FILM &&
                   movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-              : movie.duration > DURATION_SHORT_FILM &&
-                  movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+              : movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
           }
         }),
       );
@@ -104,14 +102,12 @@ const SavedMovies = ({ movies, handleDeleteMovie, isPreloaderVisible, pathname, 
           return isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            : movie.nameRU.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         } else {
           return isShortVideos
             ? movie.duration <= DURATION_SHORT_FILM &&
                 movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified)
-            : movie.duration > DURATION_SHORT_FILM &&
-                movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
+            : movie.nameEN.toLowerCase().replaceAll(' ', '').includes(searchTextModified);
         }
       }),
     );

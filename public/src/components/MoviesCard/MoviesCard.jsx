@@ -33,7 +33,8 @@ const MoviesCard = ({ movieInfo, handleCreateMovie, handleDeleteMovie, savedMovi
 
   const handleClickFavorite = (event) => {
     event.preventDefault();
-    isFavorite
+
+    return isFavorite
       ? handleDeleteMovie(id)
       : handleCreateMovie({
           country,
