@@ -1,0 +1,40 @@
+@import "../../vars.scss";
+
+.navtab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  gap: 10px;
+  max-width: 308px;
+
+  @media screen and (max-width: 500px) {
+    gap: 6px;
+    padding-bottom: 17px;
+  }
+
+  .navtab__link {
+    @include classicText($fsButton, $fwMedium, $lhCaptionFooter, $blackColor, center);
+    width: 96px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $lineColor;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      @media screen and (max-width: 500px) {
+        @include classicText($fsLoginCaption, $fwMedium, $lhCaptionFooter, $blackColor, center);
+        width: 82px;
+        height: 26px;
+      }
+  }
+}

@@ -1,0 +1,173 @@
+@import "../../vars.scss";
+
+.landingBlock {
+  @include classicDiv(column);
+  max-width: 1280px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 70px;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 50px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 14px;
+  }
+}
+
+.slide{
+  @include classicDiv(column);
+  width: 100%;
+  align-items: flex-start;
+
+
+    .slide__header{
+      @include classicText($fsH2, $fwRegular, $lhH2, $blackColor, left);
+      margin-top: 112px;
+      width: 100%;
+
+      @media screen and (max-width: 800px) {
+        margin-top: 90px;
+      }
+
+      @media screen and (max-width: 500px) {
+        @include classicText($fsText2, $fwRegular, $lhText2, $blackColor, left);
+        margin-top: 70px;
+      }
+    }
+
+    .slide__header::after{
+      content: "";
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-top: 24px;
+      width: 100%;
+      box-sizing: border-box;
+      height: 1px;
+      background-color: $blackColor;
+
+
+      @media screen and (max-width: 500px) {
+        margin-top: 28px;
+      }
+    } 
+}
+
+.aboutme{
+  background-color: $whiteColor;
+  width: 100%;
+
+  .aboutme__info{
+    @include classicDiv(row);
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 66px 0 101px 0;
+    width: 100%;
+
+    @media screen and (max-width: 800px) {
+      gap: 49px;
+      margin: 60px 0 70px 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      @include classicDiv(column-reverse);
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 60px 0 70px 0;
+    }
+
+    // @media screen and (max-width: 500px) {
+    //   @include classicDiv(column);
+    //   justify-content: center;
+    //   align-items: flex-start;
+    //   gap: 40px;
+    //   margin: 60px 0 70px 0;
+    // }
+
+      .aboutme__left {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        @media screen and (max-width: 800px) {
+          gap: 16px;
+        }
+
+        @media screen and (max-width: 500px) {
+          gap: 20px;
+        }
+    
+        .aboutme__header{
+          @include classicText($fsH1, $fwRegular, $lhH1, $blackColor, left);
+
+          @media screen and (max-width: 800px) {
+            @include classicText($fsTabletH1, $fwRegular, $lhTabletH3, $blackColor, left);
+          }
+
+          @media screen and (max-width: 500px) {
+            @include classicText($fsBigLinks, $fwRegular, $lhMobileName, $blackColor, left);
+          }
+        }
+
+        .aboutme__subheader{
+          @include classicText($fsText2, $fwMedium, $lhText, $blackColor, left);
+          margin-bottom: 8px;
+
+          @media screen and (max-width: 800px) {
+            @include classicText($fsButton, $fwMedium, $lhPlaceholder, $blackColor, left);
+            margin-bottom: 4px;
+          }
+
+          @media screen and (max-width: 500px) {
+            @include classicText($fsProfileT, $fwRegular, $lhCaptionFooter, $blackColor, left);
+            margin-bottom: 0;
+          }
+        }
+
+        .aboutme__text{
+          @include classicText($fsText, $fwRegular, $lhText2, $blackColor, left);
+          max-width: 600px;
+          margin-bottom: 81px;
+
+          @media screen and (max-width: 800px) {
+            @include classicText($fsButton, $fwRegular, $lhPlaceholder, $blackColor, left);
+            margin-bottom: 71px;
+          }
+
+          @media screen and (max-width: 500px) {
+            @include classicText($fsProfileT, $fwRegular, $lhCaptionFooter, $blackColor, left);
+            margin-bottom: 20px;
+          }
+        }
+
+        .aboutme__link{
+          @include classicText($fsText, $fwMedium, $lhCaption, $blackColor, left);
+          cursor: pointer;
+          transition: all 0.3s ease-out;
+
+            &:hover {
+              opacity: .7;
+            }
+        }
+      }
+
+      .aboutme__right{
+        width: 270px;
+        height: 327px;
+
+        @media screen and (max-width: 800px) {
+          width: 255px;
+          height: 307px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 292px;
+          height: 352px;
+        }
+      }
+    } 
+}

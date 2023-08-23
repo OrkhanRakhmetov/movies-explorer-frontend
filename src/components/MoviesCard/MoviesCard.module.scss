@@ -1,0 +1,108 @@
+@import "../../vars.scss";
+
+.card{
+  all: unset;
+  @include classicDiv(column);
+  max-height: 271px;
+  width: 364px;
+  background-color: #FDFDFD;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  @media screen and (max-width: 940px) {
+    width: 339px;
+    max-height: 258px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+    height: 236px;
+  }
+}
+
+.card__top{
+  @include classicDiv(row);
+  padding: 14px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+
+  .card__left{
+    @include classicDiv(column);
+    gap: 9px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+
+    .card__name{
+      @include classicText($fsImages, $fwMedium, $lhPlaceholder, $blackColor, left);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      letter-spacing: 0px;
+      word-break: break-all;
+      box-sizing: border-box;
+      padding-right: 6px;
+      max-width: 100%;
+    }
+
+    .card__duration{
+      @include classicText($fsProfileT, $fwRegular, $lhCaptionImages, $grayColor, left);
+    }
+  }
+
+  .card__right{
+    all: unset;
+    @include classicDiv(row);
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 100%;
+    background-color: #F9F9F9;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .card__right_active{
+    background-color: #2BE080;
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+
+.card__bottom{
+  @include classicDiv(row);
+  width: 100%;
+  height: 203px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 940px) {
+    height: 190px;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 168px;
+  }
+
+  .card__image{
+    object-fit: cover;
+    width: 100%;
+    height: 203px;
+
+    @media screen and (max-width: 940px) {
+      height: 190px;
+    }
+
+    @media screen and (max-width: 500px) {
+      height: 168px;
+    }
+  }
+}

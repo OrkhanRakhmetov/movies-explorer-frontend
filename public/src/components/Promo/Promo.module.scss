@@ -1,0 +1,60 @@
+@import "../../vars.scss";
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 40px 0 40px;
+  box-sizing: border-box;
+  min-height: 493px;
+
+  @media screen and (max-width: 800px) {
+    box-sizing: border-box;
+    padding: 20px 20px 0 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 14px 14px 0 14px;
+  }
+
+  .promo__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $fillColor;
+    max-width: 1280px;
+    width: 100%;
+    gap: 151px;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+  
+    @media screen and (max-width: 800px) {
+      gap: 314px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 212px;
+    }
+
+    .header {
+      @include classicText($fsH1, $fwRegular, $lhH1, $blackColor, center);
+      margin-top: 160px;
+      max-width: 730px;
+      letter-spacing: -1px;
+
+      @media screen and (max-width: 800px) {
+        @include classicText($fsTabletH1, $fwRegular, $lhTabletH1, $blackColor, center);
+        margin-top: 350px;
+      }
+
+      @media screen and (max-width: 500px) {
+        @include classicText($fsMobileH, $fwRegular, $lhMobileH1, $blackColor, center);
+        margin-top: 220px;
+      }
+    }
+  }
+}

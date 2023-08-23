@@ -1,0 +1,50 @@
+@import "../../vars.scss";
+
+.notfound{
+  @include classicDiv(column);
+  align-content: center;
+  gap: 5px;
+  padding: 246px 70px 60px 70px;
+
+  @media screen and (max-width: 800px) {
+    padding: 408px 50px 222px 50px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 329px 30px 30px 30px;
+    gap: 10px;
+  }
+}
+
+.notfound__header{
+  @include classicText($fs404, $fwRegular, $lh404, $blackColor, center);
+
+  @media screen and (max-width: 500px) {
+    @include classicText($fsMobile404, $fwRegular, $lhMobile404, $blackColor, center);
+  }
+}
+
+.notfound__text{
+  @include classicText($fs404Caption, $fwRegular, $lh404Caption, $blackColor, center);
+  padding-bottom: 179px;
+
+  @media screen and (max-width: 500px) {
+    @include classicText($fsButton, $fwRegular, $lhButtonEtc, $blackColor, center);
+    padding-bottom: 274px;
+  }
+}
+
+.notfound__link{
+  all: unset;
+  @include classicText($fsText, $fwRegular, $lhCaption, $greenColor, center);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+  }
+  
+  @media screen and (max-width: 500px) {
+    @include classicText($fsButton, $fwRegular, $lhButtonEtc, $greenColor, center);
+  }
+}

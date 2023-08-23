@@ -1,0 +1,168 @@
+@import "../../vars.scss";
+
+.searchform{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 83px;
+  width: 100%;
+  padding: 80px 70px 10px 70px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 800px) {
+    @include classicDiv(column);
+    padding: 60px 30px 10px 30px;
+    gap: 37px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 60px 10px 10px 10px;
+    gap: 44px;
+  }
+
+  .searchform__searching{
+    @include classicDiv(row);
+    gap: 41px;
+    width: 100%;
+    border-bottom: 1px solid #AAAAAA;
+    padding-bottom: 83px;
+
+    @media screen and (max-width: 800px) {
+      @include classicDiv(column);
+      gap: 38px;
+      padding-bottom: 57px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 45px;
+      padding-bottom: 43px;
+    }
+  }
+
+  .searchform__form{
+    width: 100%;
+    @include classicDiv(row);
+    position: relative;
+    
+    .searchform__input{
+      width: 100%;
+      display: grid;
+      outline: none;
+      box-sizing: border-box;
+      border: 1.5px solid #AAAAAA;
+      height: 48px;
+      border-radius: 50px;
+      
+      @include classicText($fsCaptionImages, $fwRegular, $lhH2, $blackColor, left);
+      padding-left: 22px;
+      padding-right: 90px;
+
+      &::placeholder {
+        @include classicText($fsText, $fwRegular, $lhPlaceholder, $blackColor, left);
+        color: #A0A0A0;
+      }
+
+      &:focus {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+        outline: rgba(105, 105, 105, 0.818) 1px auto;
+      }
+    }
+
+    .searchform__button{
+      @include classicDiv(column);
+      border: 0px solid black;
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      bottom: 7px;
+      width: 80px;
+      height: 34px;
+      border-radius: 48px;
+      background-color: #2BE080;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      }
+    }
+  }
+
+  .searchform__shortsContainer{
+    @include classicDiv(row);
+    gap: 14px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      gap: 12px;
+    }
+
+    @media screen and (max-width: 800px) {
+      gap: 13px;
+    }
+
+
+    .searchform__shortsText{
+      @include classicText($fsCaptionFooter, $fwRegular, $lhPlaceholder, $blackColor, left);
+      margin: 0;
+
+      @media screen and (max-width: 800px) {
+        @include classicText($fsCaptionFooter, $fwRegular, $lhPlaceholder, $blackColor, right);
+      }
+    }
+
+    .searchform__shortsButton{
+      display: flex;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    .searchform__shortsCheckbox{
+      width: 36px;
+      height: 20px;
+      background-color: white;
+      border: 1px solid rgba(61, 61, 61, 0.264);
+      -webkit-appearance: none;
+      outline: none;
+      border-radius: 20px;
+      box-sizing: border-box;
+      transition: .8s;
+      position: relative;
+      cursor: pointer;
+
+      &:checked {
+        background-color: #2BE080;
+        border: none;
+      }
+
+      &:before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #2BE080;
+        border-radius: 100%;
+        position: absolute;
+        transition: all 0.5s;
+        top: 5.5px;
+        bottom: 6px;
+        left: 6px;
+        transform: scale(1.1);
+      }
+
+      &:checked:before{
+        left:auto;
+        right: 6px;
+        background-color: white;
+      }
+    }
+  }
+}
